@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Mr_Movies/static/css/main.ecf9563e.chunk.css",
+    "main.js": "/Mr_Movies/static/js/main.913f19e5.chunk.js",
+    "main.js.map": "/Mr_Movies/static/js/main.913f19e5.chunk.js.map",
+    "runtime-main.js": "/Mr_Movies/static/js/runtime-main.da5f4732.js",
+    "runtime-main.js.map": "/Mr_Movies/static/js/runtime-main.da5f4732.js.map",
+    "static/js/2.461f2151.chunk.js": "/Mr_Movies/static/js/2.461f2151.chunk.js",
+    "static/js/2.461f2151.chunk.js.map": "/Mr_Movies/static/js/2.461f2151.chunk.js.map",
+    "index.html": "/Mr_Movies/index.html",
+    "precache-manifest.72a5356127c66eedfb31242588164400.js": "/Mr_Movies/precache-manifest.72a5356127c66eedfb31242588164400.js",
+    "service-worker.js": "/Mr_Movies/service-worker.js",
+    "static/css/main.ecf9563e.chunk.css.map": "/Mr_Movies/static/css/main.ecf9563e.chunk.css.map",
+    "static/js/2.461f2151.chunk.js.LICENSE.txt": "/Mr_Movies/static/js/2.461f2151.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.da5f4732.js",
+    "static/js/2.461f2151.chunk.js",
+    "static/css/main.ecf9563e.chunk.css",
+    "static/js/main.913f19e5.chunk.js"
+  ]
+}
