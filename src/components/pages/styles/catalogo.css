@@ -1,0 +1,21 @@
+.title {
+    text-align: center;
+}
+.container__carrousel {
+    padding-top: 50px;
+}
+.carrousel {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 30px 0;
+}
+.carrousel::-webkit-scrollbar {
+    background-color: #222831;
+    height: 10px;
+}
+.carrousel::-webkit-scrollbar-thumb {
+    background-color: #32e0c4;
+    border-radius: 50px;
+    box-shadow: 0px 0px 15px #32e0c4;
+}

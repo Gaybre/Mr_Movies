@@ -1,4 +1,12 @@
+:root {
+ --color-claro-a: "#eeeeee";
+ --color-claro-b: "#32e0c4";
+ --color-obscuro-a: "#222831";
+ --color-obscuro-b: "#393e46";
+}
 body {
+  background-color: #393e46;
+  color: #eeeeee;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

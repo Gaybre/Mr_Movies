@@ -1,0 +1,14 @@
+.container {
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+}
+.avatar {
+    border-radius: 50px;
+}
+.redes img {
+    margin: 0 20px;
+}
+.redes img:hover {
+    transform: scale(1.2);
+}
