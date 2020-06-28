@@ -7,18 +7,18 @@
     width: 250px;
 }
 .welcomeCard__button p {
-    /* background: linear-gradient(#32e0c4, #222831);
-    background-color: #222831; */
     background: linear-gradient(#222831, #393e46);
     font-size: 1.7em;
     letter-spacing: .2em;
     padding: 20px;
     border-radius: 30px;
+    transition: 400ms;
 }
 .welcomeCard__button {
     color: #fff;
     text-decoration: none;
 }
 .welcomeCard__button p:hover {
-    box-shadow: 0px 0px 15px #32e0c4;
+    box-shadow: 0px 0px 25px #32e0c4;
+    color: #32e0c4;
 }

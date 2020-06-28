@@ -1,11 +1,12 @@
 .carrousel__item {
     margin-left: 30px;
-    background-color: #eeeeee;
-    color: #222831;
+    background-color: #222831;
+    color: #eeeeee;
     min-width: 200px;
     height: 420px;
     border-radius: 10px;
     transition: 400ms;
+    animation: 2000ms fadeIn;
 }
 .carrousel__item:hover {
     box-shadow: 0px 0px 15px #32e0c4;
@@ -13,6 +14,7 @@
 }
 .carrousel__item figure {
     margin: 0;
+    height: 300px;
 }
 .carrousel__item img {
     width: 100%;
@@ -37,4 +39,8 @@
 }
 .carrousel__item:hover {
     transform: scale(1.05);
+}
+@keyframes fadeIn {
+    0% { opacity: 0}
+    100% { opacity: 1}
 }

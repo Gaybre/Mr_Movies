@@ -9,10 +9,13 @@ import './styles/contacto.css'
 const Contacto = () => (
     <div className="container">
         <h1>Hola! Soy Juan Gaybre</h1>
+        <h4>Mr. Movies es una marca inventada, ya sabes,
+            una excusa para ir practicando, pero yo soy 100% real no fake. 
+        </h4>
         <img className="avatar" src="https://avatars2.githubusercontent.com/u/55895001?s=460&u=f04c2b0cf200a484222678ecf2cd0d820b32bd9a&v=4" alt="me"/>
-        <h4>Mr. Movies es una marca inventada, ya sabes una excusa para practicar lo aprendido en esta semana pero yo soy real, charlemos ;)</h4>
         <h3>
-            Me puedes encontrar en redes
+            ¿Tienes alguna duda? charlemos ;) <br/>
+            ¿Algun consejo? ayudame a mejorar :D
         </h3>
         <div className="redes">
             <a href="https://github.com/Gaybre">
@@ -28,6 +31,9 @@ const Contacto = () => (
                 <img src={ Instagram } alt="icon-redes" />
             </a>
         </div>
+        <h4>
+            Me puedes encontrar en redes
+        </h4>
     </div>
 )
 

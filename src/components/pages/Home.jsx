@@ -10,7 +10,7 @@ const Home = () => (
         <img src={ WelcomeImg } alt="img-bienvenido"/>
         <h3>Hemos mejorado nuestra interfaz, esperamos que la disfrutes</h3>
         <Link
-        to="/catalogo"
+        to="/Mr_Movies/catalogo"
         className="welcomeCard__button"
         >
             <p>Comenzar</p>

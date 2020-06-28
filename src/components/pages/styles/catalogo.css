@@ -1,3 +1,6 @@
+h2 {
+    margin-left: 30px;
+}
 .title {
     text-align: center;
 }
@@ -13,9 +16,9 @@
 .carrousel::-webkit-scrollbar {
     background-color: #222831;
     height: 10px;
+    box-shadow: 0px 0px 15px #32e0c4;
 }
 .carrousel::-webkit-scrollbar-thumb {
     background-color: #32e0c4;
     border-radius: 50px;
-    box-shadow: 0px 0px 15px #32e0c4;
 }

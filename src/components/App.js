@@ -11,9 +11,9 @@ const App = () => (
   <BrowserRouter>
     <Navbar />
     <Switch>
-      <Route exact path="/" component={ Home } />
-      <Route exact path="/catalogo" component={ Catalogo } />
-      <Route exact path="/contacto" component={ Contacto } />
+      <Route exact path="/Mr_Movies/" component={ Home } />
+      <Route exact path="/Mr_Movies/catalogo" component={ Catalogo } />
+      <Route exact path="/Mr_Movies/contacto" component={ Contacto } />
     </Switch>
     <Footer />
   </BrowserRouter>
