@@ -1,21 +1,31 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+import '../styles/components/navbar.css'
 
-import './styles/navbar.css'
 import Logo from '../img/logo-nav.png'
 
-const Navbar = () => {
-    return(
-        <div className="navbar">
-            <Link to="/Mr_Movies/">
-                <img src={ Logo } alt="logo"/>
-            </Link>
-            <div className="navbar__menu">
-                <Link className="navbar__menu-item" to="/Mr_Movies/catalogo">Catalogo</Link>
-                <Link className="navbar__menu-item" to="/Mr_Movies/contacto">Contacto</Link>
-            </div>
-        </div>
-    )
-}
+const Navbar = () => (
+  <div className="navbar">
+    <Link to="/Mr_Movies/">
+      <img src={ Logo } alt="Mr. movie logo"/>
+    </Link>
+    <div className="navbar__menu">
+      <NavLink 
+        className="navbar__menu-item" 
+        activeClassName="active" 
+        to="/Mr_Movies/catalogo"
+      >
+        Catalogo
+      </NavLink>
+      <NavLink 
+        className="navbar__menu-item" 
+        activeClassName="active" 
+        to="/Mr_Movies/contacto"
+      >
+        Contacto
+      </NavLink>
+    </div>
+  </div>
+)
 
 export default Navbar

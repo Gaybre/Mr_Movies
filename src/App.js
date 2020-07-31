@@ -1,11 +1,11 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import Navbar from './Navbar'
+import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Catalogo from './pages/Catalogo'
 import Contacto from './pages/Contacto'
-import Footer from '../components/Footer'
+import Footer from './components/Footer'
 
 const App = () => (
   <BrowserRouter>
