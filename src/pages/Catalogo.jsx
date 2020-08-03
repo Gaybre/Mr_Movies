@@ -4,6 +4,7 @@ import '../styles/pages/catalogo.css'
 import Carrousel from '../components/Carrousel'
 import Loader from '../components/Loader'
 import List from '../components/List'
+import ContentModal from '../components/ContentModal'
 
 class Catalogo extends React.Component {
   constructor() {
@@ -12,7 +13,8 @@ class Catalogo extends React.Component {
       listMovies: [],
       cargando: false,
       error: undefined,
-      modalIsOpen: false
+      modalIsOpen: false,
+      movieSelected: []
     }
   }
 
@@ -20,36 +22,42 @@ class Catalogo extends React.Component {
     this.setState({ modalIsOpen: false})
   }
 
-  handleOpenModal = (ev) => {
-    this.setState({ modalIsOpen: true})
+  handleOpenModal = (movie, ev) => {
+    this.setState({ 
+      movieSelected: movie,
+      modalIsOpen: true
+    })
   }
 
-  getMovies = async () => {
-    const API = 'https://yts.mx/api/v2/list_movies.json?genre='
+  getMovies = async (list) => {
+    const API = 'https://yts.mx/api/v2/list_movies.json?'
+
+    try {
+      const response = await fetch(`${API}genre=${list}`)
+      const res = await response.json()
+      const data = res.data.movies
+      return data
+    } catch(error) {
+      return error
+    }
+  }
+  
+  getMovieList = async () => {
     this.setState({ cargando: true, error: null })
+    const actionList = await this.getMovies(`Action`)
+    const comedyList = await this.getMovies(`Comedy`)
+    const terrorList = await this.getMovies(`Thriller`)
     
     try {
-      const getMovieList = async (url) => {
-        const response = await fetch(url)
-        const res = await response.json()
-        const data = res.data.movies
-        return data
-      }
-    
-      const actionList = await getMovieList(`${API}Action`)
-      const comedyList = await getMovieList(`${API}Comedy`)
-      const terrorList = await getMovieList(`${API}Thriller`)
-      
       this.setState({
         listMovies: [{
-          action: actionList,
+          action: actionList, 
           comedy: comedyList,
           thriller: terrorList
         }],
         cargando: false,
         error: undefined
       })
-
     } catch(error) {
       this.setState({ cargando: false, error: error })
     }
@@ -57,7 +65,7 @@ class Catalogo extends React.Component {
 
   componentDidMount() {
     if(!this.state.listMovies.length) {
-      this.getMovies()
+      this.getMovieList()
     }
   }
 
@@ -71,9 +79,7 @@ class Catalogo extends React.Component {
       return (
         <Carrousel 
           movies={ list }
-          modalState={ this.state.modalIsOpen } 
           onOpenModal={ this.handleOpenModal }
-          onCloseModal={ this.handleCloseModal }
         />
       )
     }
@@ -92,7 +98,17 @@ class Catalogo extends React.Component {
         { this.loadCategory("thriller") }
       </List>
     </Fragment>
-  ) 
+  )
+
+  loadModal = () => (
+    this.state.modalState &&
+      console.log('esta seleccionando: ', this.state.movieSelected.title),
+        <ContentModal 
+          movieSelected={ this.state.movieSelected }
+          modalState={ this.state.modalIsOpen }
+          onCloseModal={ this.handleCloseModal }
+        />
+  )
     
   render() {
     // ------------------------------ if Error
@@ -101,11 +117,15 @@ class Catalogo extends React.Component {
     }
 
     return (
-      <React.Fragment>
+      <Fragment>
         <h1 className="title">Disfruta de nuestro catalogo de peliculas</h1>
-        {/* ------------------------------ if Error */}
-        { this.loadCategoriesList() }
-      </React.Fragment>
+        {/* ------------------------------ Cargar el catalogo */ 
+        this.loadCategoriesList()
+        }
+        {/* ------------------------------ Validar si modalIsOpen is true */ 
+        this.loadModal()
+        }
+      </Fragment>
     )
   }
 }

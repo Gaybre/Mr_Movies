@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import Catalogo from './pages/Catalogo'
 import Contacto from './pages/Contacto'
 import Footer from './components/Footer'
+import Error from './pages/Error'
 
 const App = () => (
   <BrowserRouter>
@@ -14,6 +15,7 @@ const App = () => (
       <Route exact path="/Mr_Movies/" component={ Home } />
       <Route exact path="/Mr_Movies/catalogo" component={ Catalogo } />
       <Route exact path="/Mr_Movies/contacto" component={ Contacto } />
+      <Route component={ Error } />
     </Switch>
     <Footer />
   </BrowserRouter>

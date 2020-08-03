@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import '../styles/pages/home.css'
 
+import Button from '../components/Button'
 import WelcomeImg from '../img/logo.png'
 
 const Home = () => (
@@ -16,12 +16,10 @@ const Home = () => (
     <h3>
       Hemos mejorado nuestra interfaz, esperamos que la disfrutes
     </h3>
-    <Link
-      to="/Mr_Movies/catalogo"
-      className="welcomeCard__button"
-    >
-      <p>Comenzar</p>
-    </Link>
+    <Button 
+      title="acceder"
+      navigation="catalogo"
+    />
   </div>
 )
 

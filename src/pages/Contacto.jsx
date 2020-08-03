@@ -5,7 +5,8 @@ import Github from '../img/gh.png'
 import Instagram from '../img/ig.png'
 import Linkedin from '../img/lk.png'
 import Twitter from '../img/tw.png'
-// import Avatar from 'https://avatars2.githubusercontent.com/u/55895001?s=460&u=f04c2b0cf200a484222678ecf2cd0d820b32bd9a&v=4'
+
+const avatar = 'https://avatars2.githubusercontent.com/u/55895001?s=460&u=f04c2b0cf200a484222678ecf2cd0d820b32bd9a&v=4'
 
 const Contacto = () => (
   <div className="container">
@@ -18,7 +19,7 @@ const Contacto = () => (
     </h4>
     <img 
       className="avatar" 
-      src="https://avatars2.githubusercontent.com/u/55895001?s=460&u=f04c2b0cf200a484222678ecf2cd0d820b32bd9a&v=4"
+      src={ avatar }
       alt="me"
     />
     <h3>

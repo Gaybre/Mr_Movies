@@ -1,0 +1,17 @@
+.button p {
+  padding: 20px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-size: 1.7em;
+  letter-spacing: .2em;
+  background: linear-gradient(#222831, #393e46);
+  transition: 400ms;
+}
+.button {
+  text-decoration: none;
+  color: #fff;
+}
+.button p:hover {
+  box-shadow: 0px 0px 25px #32e0c4;
+  color: #32e0c4;
+}

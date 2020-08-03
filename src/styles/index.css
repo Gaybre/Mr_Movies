@@ -1,8 +1,8 @@
 :root {
- --color-claro-a: "#eeeeee";
- --color-claro-b: "#32e0c4";
- --color-obscuro-a: "#222831";
- --color-obscuro-b: "#393e46";
+  --color-claro-a: "#eeeeee";
+  --color-claro-b: "#32e0c4";
+  --color-obscuro-a: "#222831";
+  --color-obscuro-b: "#393e46";
 }
 body {
   background-color: #393e46;
@@ -16,6 +16,5 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
